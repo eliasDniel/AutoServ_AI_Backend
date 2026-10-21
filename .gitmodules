@@ -1,0 +1,12 @@
+[submodule "c-gateway"]
+	path = c-gateway
+	url = https://github.com/eliasDniel/autoserv-c-gateway.git
+[submodule "ms-auth"]
+	path = ms-auth
+	url = https://github.com/eliasDniel/autoserv-ms-auth.git
+[submodule "ms-core"]
+	path = ms-core
+	url = https://github.com/eliasDniel/autoserv-ms-core.git
+[submodule "ms-ia"]
+	path = ms-ia
+	url = https://github.com/eliasDniel/autoserv-ms-ia.git
