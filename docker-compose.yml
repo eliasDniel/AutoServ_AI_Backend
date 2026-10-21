@@ -37,6 +37,10 @@ services:
       - DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-root}@postgres:5432/${POSTGRES_DB:-autoserv_db}?schema=identity
       - NATS_SERVICE=nats://nats:4222
       - JWT_SERVICE=${JWT_SECRET:-super-secret-key}
+      - SEED_ADMIN_CORREO=${SEED_ADMIN_CORREO:-admin@autoserv.local}
+      - SEED_ADMIN_PASSWORD=${SEED_ADMIN_PASSWORD:-Admin12345}
+      - SEED_ADMIN_NOMBRE=${SEED_ADMIN_NOMBRE:-Admin}
+      - SEED_ADMIN_APELLIDO=${SEED_ADMIN_APELLIDO:-Taller}
     depends_on:
       postgres:
         condition: service_healthy
