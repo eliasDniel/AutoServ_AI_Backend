@@ -47,5 +47,21 @@ services:
       nats:
         condition: service_healthy
 
+  c-gateway:
+    build:
+      context: ./c-gateway
+    container_name: autoserv-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NATS_SERVICE=nats://nats:4222
+      - JWT_SERVICE=${JWT_SECRET:-super-secret-key}
+    depends_on:
+      nats:
+        condition: service_healthy
+      ms-auth:
+        condition: service_started
+
 volumes:
   postgres_data:
