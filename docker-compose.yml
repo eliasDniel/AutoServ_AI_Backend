@@ -64,6 +64,8 @@ services:
         condition: service_started
       ms-core:
         condition: service_started
+      ms-ia:
+        condition: service_started
 
   ms-core:
     build:
