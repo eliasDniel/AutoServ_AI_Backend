@@ -87,6 +87,7 @@ services:
     environment:
       - NATS_SERVICE=nats://nats:4222
       - MODELO_PATH=/app/modelo/modelo_diagnostico_rf.joblib
+      - MODELO_DEMANDA_PATH=/app/modelo/modelo_demanda.joblib
       - CATALOGO_PATH=/app/datos/catalogo_sintomas.json
     depends_on:
       nats:
