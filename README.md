@@ -53,7 +53,22 @@ Eso crea:
 ms-ia/modelo/modelo_demanda.joblib
 ```
 
-### 3. Levantar el backend
+### 3. Bot de Telegram (citas)
+
+1. Crea un bot con `@BotFather` y copia el token.
+2. En la raíz del backend (o en variables de entorno del host), define:
+
+```env
+TELEGRAM_BOT_TOKEN=123456:ABC...
+TELEGRAM_BOT_USERNAME=TuBotSinArroba
+TELEGRAM_MODE=polling
+```
+
+Con `polling` no necesitas HTTPS (ideal en local). El módulo vive en `c-gateway`.
+
+Comandos del bot: `/start`, `/agendar`, `/miscitas`, `/cancelar`.
+
+### 4. Levantar el backend
 
 Desde la raíz de este repositorio, **después de cada pull** (y siempre que cambien los submódulos o el compose):
 

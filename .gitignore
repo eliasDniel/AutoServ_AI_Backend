@@ -1,4 +1,36 @@
-node_modules
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Secretos y entorno local
 .env
+.env.*
+!.env.template
+!.env.example
+**/.env
+**/.env.*
+!**/.env.template
+!**/.env.example
+
+# Builds / generados
+dist/
+build/
+coverage/
 /generated/prisma
+**/generated/prisma/
+
+# Logs y SO
+logs/
+*.log
 .DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Docker / local
+*.pem
+*.key
+.docker/
